@@ -11,7 +11,6 @@ import "./styles/styles.js";
 import styles from "./styles/styles";
 
 
-const bgimage = { uri: "https://i.imgur.com/oPVHbZA.png" };
 const Tab = createBottomTabNavigator();
 
 function Tabs() {

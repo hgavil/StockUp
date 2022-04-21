@@ -3,53 +3,16 @@ import { StyleSheet, Text, View } from 'react-native';
 import { ImageBackground } from "react-native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
-
+import React, {Component} from "react";
+import HomeScreen from "./screens/HomeScreen";
+import Portfolio from "./screens/Portfolio";
+import Settings from "./screens/Settings";
+import "./styles/styles.js";
+import styles from "./styles/styles";
 
 
 const bgimage = { uri: "https://i.imgur.com/oPVHbZA.png" };
 const Tab = createBottomTabNavigator();
-
-function HomeScreen() {
-  return (
-    <View style={styles.backdrop}>
-      <ImageBackground source={bgimage} style={styles.image}>
-        <View style={styles.container}>
-          <Text>home!</Text>
-        </View>
-      </ImageBackground>
-      
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
-function Portfolio() {
-  return (
-    <View style={styles.backdrop}>
-      <ImageBackground source={bgimage} style={styles.image}>
-        <View style={styles.container}>
-          <Text>portfolio!</Text>
-        </View>
-      </ImageBackground>
-      
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
-function Settings() {
-  return (
-    <View style={styles.backdrop}>
-      <ImageBackground source={bgimage} style={styles.image}>
-        <View style={styles.container}>
-          <Text>settings!</Text>
-        </View>
-      </ImageBackground>
-      
-      <StatusBar style="auto" />
-    </View>
-  );
-}
 
 function Tabs() {
   return (
@@ -61,34 +24,13 @@ function Tabs() {
   );
 }
 
-export default function App() {
-  return (
-    <NavigationContainer>
-      <Tabs />
-    </NavigationContainer>
-  );
+class App extends Component {
+    render() {
+        return (
+            <NavigationContainer>
+                <Tabs />
+            </NavigationContainer>
+        );
+    }
 }
-
-const styles = StyleSheet.create({
-  backdrop: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  image: {
-    flex: 1,
-    justifyContent: "center",
-    height: '100%',
-    width: '100%'
-  },
-  container: {
-    backgroundColor: "white", 
-    flex: 0.9,
-    borderRadius: 20,
-    width: '90%',
-    alignSelf: 'center',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }
-
-});
+export default App;

@@ -30,10 +30,8 @@ const styles = StyleSheet.create({
     },
     container2: {
         backgroundColor:"#DFDBED",
-        flex: 1,
         justifyContent: 'flex-start',
         width: '100%',
-        height: '10%',
         marginTop: 10,
     },
     titleText: {

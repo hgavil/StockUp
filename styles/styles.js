@@ -14,6 +14,9 @@ const styles = StyleSheet.create({
         width: '100%',
         position: 'absolute'
     },
+    icon: {
+        margin: 10
+    },
     container: {
         backgroundColor: "#DFDBED",
         flex: 1,
@@ -23,12 +26,24 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         alignItems: 'center',
         //justifyContent: 'center',
-        marginTop: 30,
+        marginTop: 10,
+    },
+    container2: {
+        backgroundColor:"#DFDBED",
+        flex: 1,
+        justifyContent: 'flex-start',
+        width: '100%',
+        height: '10%',
+        marginTop: 10,
     },
     titleText: {
         fontSize: 30,
-        margin: 50,
+        margin: 20,
         textAlign: "center",
+    },
+    subjectText: {
+        fontSize:18,
+        margin: 20
     },
     item: {
         backgroundColor: "white",

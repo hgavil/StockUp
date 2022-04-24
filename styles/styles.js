@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
         position: 'absolute'
     },
     icon: {
-        margin: 10
+        margin: 5
     },
     container: {
         backgroundColor: "#DFDBED",
@@ -30,18 +30,25 @@ const styles = StyleSheet.create({
     },
     container2: {
         backgroundColor:"#DFDBED",
-        justifyContent: 'flex-start',
+        //justifyContent: 'flex-start',
+        flex:1,
         width: '100%',
-        marginTop: 10,
+    },
+    button: {
+        width: '100%',
+        backgroundColor: '#FFFAF0',
+        borderRadius: 4,
+        margin: 10,
+        alignItems: 'center'
     },
     titleText: {
         fontSize: 30,
-        margin: 20,
+        margin: 10,
         textAlign: "center",
     },
     subjectText: {
         fontSize:18,
-        margin: 20
+        margin: 10
     },
     item: {
         backgroundColor: "white",

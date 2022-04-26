@@ -14,6 +14,12 @@ import { Image } from "react-native";
 
 /* ICONS used fairly as part of the Flaticon License: "Free for personal and commercial purpose with attribution". Credits go to users Freepik, Miroliubov, and Gregor Cresnar Premium. */
 
+/* Styling notes
+  Purple color: #5E43AB
+  Blue Color: #1c8cfc
+  Gray Color: #a4a4a5
+  */
+
 const Tab = createBottomTabNavigator();
 
 function Tabs() {
@@ -22,20 +28,32 @@ function Tabs() {
       <Tab.Screen name="Home" component={HomeScreen}
         options={{
           title: 'Home',
+          tabBarLabel: ({focused, color, size}) => (
+            <Text style={{fontSize: 10, color: focused ? '#5e43ab' : '#a4a4a5'}}>Home</Text>
+          ),
+          tabBarLabelPosition: 'below-icon',
           tabBarIcon: ({focused}) => (
-          <Image source={require("./assets/icons/home.png")} style={{width: 25, height: 25, tintColor: focused ? '#1c8cfc' : '#a4a4a5'}} />)
+          <Image source={require("./assets/icons/home.png")} style={{ width: 25, height: 25, tintColor: focused ? '#5e43ab' : '#a4a4a5' }} />)
         }} />
       <Tab.Screen name="Portfolio" component={Portfolio}
         options={{
           title: 'Portfolio',
+          tabBarLabel: ({focused, color, size}) => (
+            <Text style={{fontSize: 10, color: focused ? '#5e43ab' : '#a4a4a5'}}>Portfolio</Text>
+          ),
+          tabBarLabelPosition: 'below-icon',
           tabBarIcon: ({focused}) => (
-          <Image source={require("./assets/icons/portfolio.png")} style={{width: 25, height: 25, tintColor: focused ? '#1c8cfc' : '#a4a4a5'}} />)
+          <Image source={require("./assets/icons/portfolio.png")} style={{width: 25, height: 25, tintColor: focused ? '#5e43ab' : '#a4a4a5'}} />)
         }} />
       <Tab.Screen name="Settings" component={Settings}
         options={{
           title: 'Settings',
+          tabBarLabel: ({focused, color, size}) => (
+            <Text style={{fontSize: 10, color: focused ? '#5e43ab' : '#a4a4a5'}}>Settings</Text>
+          ),
+          tabBarLabelPosition: 'below-icon',
           tabBarIcon: ({focused}) => (
-          <Image source={require("./assets/icons/settings.png")} style={{width: 25, height: 25, tintColor: focused ? '#1c8cfc' : '#a4a4a5'}} />)
+          <Image source={require("./assets/icons/settings.png")} style={{width: 25, height: 25, tintColor: focused ? '#5e43ab' : '#a4a4a5'}} />)
         }} />
     </Tab.Navigator>
   );

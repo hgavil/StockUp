@@ -34,6 +34,20 @@ const styles = StyleSheet.create({
         flex:1,
         width: '100%',
     },
+    container3: {
+        backgroundColor: "#DFDBED",
+        flex: 0,
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
+        borderBottomLeftRadius: 20,
+        borderBottomRightRadius: 20,
+        width: '90%',
+        alignSelf: 'center',
+        alignItems: 'center',
+        marginTop: 10,
+        paddingBottom: 10,
+        // paddingHorizontal: 10
+    },
     button: {
         width: '100%',
         backgroundColor: '#FFFAF0',
@@ -64,7 +78,37 @@ const styles = StyleSheet.create({
         fontSize:50,
         color:'#FFFFFF',
         alignSelf: 'center'
-    }
+    },
+
+    stockButton: {
+        borderRadius: 8,
+        padding: 6,
+        height: 60,
+        width: '100%',
+        justifyContent: 'center',
+        alignSelf: 'center',
+        alignItems: 'center',
+        elevation: 5,
+        shadowOpacity: 0.4,
+        shadowColor: 'black',
+        shadowRadius: 5,
+        shadowOffset: {width: -2, height: 2},
+        margin: 5
+      },
+
+      stockButtonTextLeft: {
+        fontSize: 16,
+        color: 'black',
+        fontWeight: 'bold',
+        textAlign: 'left'
+      },
+
+      stockButtonTextRight: {
+        fontSize: 16,
+        color: 'black',
+        fontWeight: 'bold',
+        textAlign: 'right'
+      },
 
 });
 

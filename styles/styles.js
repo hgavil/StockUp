@@ -79,6 +79,14 @@ const styles = StyleSheet.create({
         color:'#FFFFFF',
         alignSelf: 'center'
     },
+    buttoncont:
+    {
+        width:100,
+        alignSelf:'center'
+    },
+    loginBut: {
+        
+    },
 
     stockButton: {
         borderRadius: 8,

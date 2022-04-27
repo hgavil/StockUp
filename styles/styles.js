@@ -56,9 +56,11 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     titleText: {
-        fontSize: 30,
+        fontSize: 40,
         margin: 10,
         textAlign: "center",
+        paddingTop: 10,
+        paddingBottom: 10
     },
     subjectText: {
         fontSize:18,
@@ -73,6 +75,8 @@ const styles = StyleSheet.create({
         width: '70%',
         borderBottomColor: 'black',
         borderBottomWidth: 2,
+        paddingTop: 5,
+        paddingBottom: 5
     },
     logo: {
         fontSize:50,
@@ -117,6 +121,37 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'right'
       },
+
+
+      accButton: {
+          borderRadius: 8,
+          padding: 6,
+          height: 80,
+          width: '100%',
+          justifyContent: 'center',
+          alignSelf: 'center',
+          alignItems: 'center',
+          elevation: 5,
+          shadowOpacity: 0.4,
+          shadowColor: 'black',
+          shadowRadius: 5,
+          shadowOffset: {width: -2, height: 2},
+          margin: 5
+        },
+
+        accButtonTextLeft: {
+          fontSize: 16,
+          color: 'black',
+          fontWeight: 'bold',
+          textAlign: 'left'
+        },
+
+        accButtonTextRight: {
+          fontSize: 16,
+          color: 'black',
+          fontWeight: 'bold',
+          textAlign: 'right'
+        },
 
 });
 

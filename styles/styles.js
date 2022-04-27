@@ -48,6 +48,10 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
         // paddingHorizontal: 10
     },
+    accountContainer: {
+        flex: 1,
+    },
+
     button: {
         width: '100%',
         backgroundColor: '#FFFAF0',
@@ -90,6 +94,14 @@ const styles = StyleSheet.create({
     },
     loginBut: {
         
+    },
+
+    transactionItem: {
+        fontSize:16
+    },
+    transactionTableHeader: {
+        fontSize:16,
+        color:'white'
     },
 
     stockButton: {

@@ -36,6 +36,8 @@ function HomeStackScreen() {
     )
 }
 
+
+
 function Tabs() {
   return (
     <Tab.Navigator backBehavior='history'>

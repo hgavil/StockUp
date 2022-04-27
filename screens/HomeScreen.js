@@ -44,7 +44,7 @@ class HomeScreen extends Component {
                                     backgroundColor: pressed ? 'lightgray' : 'white',},
                                     styles.accButton
                                 ]}
-                                onPress={() => this.props.navigation.navigate('Account')}>
+                                onPress={() => this.props.navigation.navigate('Account', { accNum: this.acc1Num, accBal: this.acc1Bal })}>
 
                                 <View style={{flexDirection: 'row', width: '85%'}}>
                                     <View style={{flex: 1.1, flexDirection: 'column', alignself: 'baseline'}}>

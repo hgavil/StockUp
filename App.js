@@ -7,6 +7,7 @@ import React, {Component} from "react";
 import HomeScreen from "./screens/HomeScreen";
 import Portfolio from "./screens/Portfolio";
 import Settings from "./screens/Settings";
+import Login from "./screens/Login"
 import "./styles/styles.js";
 import styles from "./styles/styles";
 import TabBarIcon from '@react-navigation/bottom-tabs/src/views/TabBarIcon';

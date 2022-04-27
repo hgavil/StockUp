@@ -59,6 +59,11 @@ const styles = StyleSheet.create({
         width: '70%',
         borderBottomColor: 'black',
         borderBottomWidth: 2,
+    },
+    logo: {
+        fontSize:50,
+        color:'#FFFFFF',
+        alignSelf: 'center'
     }
 
 });

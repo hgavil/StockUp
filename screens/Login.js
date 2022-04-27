@@ -10,10 +10,7 @@ class Login extends Component {
             <View style={styles.backdrop}>
                 <ImageBackground source={require('../assets/bgimage.png')} style={styles.image}>
                     <Text style={styles.logo}>StockUp</Text>
-                    <Button  
-                    title="Go to Profile"  
-                    onPress={() => this.props.navigation.navigate('Home')}  
-                    />  
+                    
                 </ImageBackground>
 
                 <StatusBar style="auto" />

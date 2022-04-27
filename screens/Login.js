@@ -1,4 +1,4 @@
-import {ImageBackground, Pressable, Text, View} from "react-native";
+import {ImageBackground, Pressable, Text, View, Button} from "react-native";
 import {StatusBar} from "expo-status-bar";
 import React, {Component} from "react";
 import styles from "../styles/styles";
@@ -10,7 +10,18 @@ class Login extends Component {
             <View style={styles.backdrop}>
                 <ImageBackground source={require('../assets/bgimage.png')} style={styles.image}>
                     <Text style={styles.logo}>StockUp</Text>
-                    
+                    <View style={styles.buttoncont}>
+                        <Button style={styles.loginBut}
+                            title="Login"
+                            color="#5E43AB"
+                            onPress={() => Alert.alert('Simple Button pressed')}
+                        />
+                        <Button style={styles.loginBut}
+                            title="Register"
+                            color="#5E43AB"
+                            onPress={() => Alert.alert('Simple Button pressed')}
+                        />
+                    </View>
                 </ImageBackground>
 
                 <StatusBar style="auto" />

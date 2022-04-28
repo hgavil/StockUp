@@ -32,6 +32,13 @@ const styles = StyleSheet.create({
     icon: {
         margin: 5
     },
+    inputSimpleBorder: {
+        backgroundColor: "white",
+        borderWidth: 1,
+        borderColor: 'grey',
+        padding: 10,
+        fontSize: 20
+    },
     container: {
         backgroundColor: "#DFDBED",
         flex: 1,

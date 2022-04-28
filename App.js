@@ -14,6 +14,7 @@ import TabBarIcon from '@react-navigation/bottom-tabs/src/views/TabBarIcon';
 import { Image } from "react-native";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Account from "./screens/Account";
+import { useState } from "react";
 
 /* ICONS used fairly as part of the Flaticon License: "Free for personal and commercial purpose with attribution". Credits go to users Freepik, Miroliubov, and Gregor Cresnar Premium. */
 
@@ -29,7 +30,6 @@ const HomeStackNav = createNativeStackNavigator();
 function HomeStackScreen() {
     return (
         <HomeStackNav.Navigator>
-            <HomeStackNav.Screen name="Login" component={Login}/>
             <HomeStackNav.Screen name="Home" component={HomeScreen}  />
             <HomeStackNav.Screen name="Account" component={Account}/>
 
@@ -37,53 +37,55 @@ function HomeStackScreen() {
     )
 }
 
-
-
-function Tabs() {
+function App(){
+  const [loginStatus,setStatus]=useState(false)
+  const status=()=>{
+    setStatus(!loginStatus)
+  }
+  if(!loginStatus)
+  {
+    return(
+      <Login status={status}/>
+    )
+  }
   return (
-    <Tab.Navigator backBehavior='history'>
-      <Tab.Screen name="HomeScreen" component={HomeStackScreen}
-        options={{
-        headerShown: false,
-          title: 'Home',
-          tabBarLabel: ({focused, color, size}) => (
-            <Text style={{fontSize: 10, color: focused ? '#5e43ab' : '#a4a4a5'}}>Home</Text>
-          ),
-          tabBarLabelPosition: 'below-icon',
-          tabBarIcon: ({focused}) => (
-          <Image source={require("./assets/icons/home.png")} style={{ width: 25, height: 25, tintColor: focused ? '#5e43ab' : '#a4a4a5' }} />)
-        }} />
-      <Tab.Screen name="Portfolio" component={Portfolio}
-        options={{
-          title: 'Portfolio',
-          tabBarLabel: ({focused, color, size}) => (
-            <Text style={{fontSize: 10, color: focused ? '#5e43ab' : '#a4a4a5'}}>Portfolio</Text>
-          ),
-          tabBarLabelPosition: 'below-icon',
-          tabBarIcon: ({focused}) => (
-          <Image source={require("./assets/icons/portfolio.png")} style={{width: 25, height: 25, tintColor: focused ? '#5e43ab' : '#a4a4a5'}} />)
-        }} />
-      <Tab.Screen name="Settings" component={Settings}
-        options={{
-          title: 'Settings',
-          tabBarLabel: ({focused, color, size}) => (
-            <Text style={{fontSize: 10, color: focused ? '#5e43ab' : '#a4a4a5'}}>Settings</Text>
-          ),
-          tabBarLabelPosition: 'below-icon',
-          tabBarIcon: ({focused}) => (
-          <Image source={require("./assets/icons/settings.png")} style={{width: 25, height: 25, tintColor: focused ? '#5e43ab' : '#a4a4a5'}} />)
-        }} />
-    </Tab.Navigator>
+    <NavigationContainer>
+      <Tab.Navigator backBehavior='history'>
+        <Tab.Screen name="HomeScreen" component={HomeStackScreen}
+          options={{
+          headerShown: false,
+            title: 'Home',
+            tabBarLabel: ({focused, color, size}) => (
+              <Text style={{fontSize: 10, color: focused ? '#5e43ab' : '#a4a4a5'}}>Home</Text>
+            ),
+            tabBarLabelPosition: 'below-icon',
+            tabBarIcon: ({focused}) => (
+            <Image source={require("./assets/icons/home.png")} style={{ width: 25, height: 25, tintColor: focused ? '#5e43ab' : '#a4a4a5' }} />)
+          }} />
+        <Tab.Screen name="Portfolio" component={Portfolio}
+          options={{
+            title: 'Portfolio',
+            tabBarLabel: ({focused, color, size}) => (
+              <Text style={{fontSize: 10, color: focused ? '#5e43ab' : '#a4a4a5'}}>Portfolio</Text>
+            ),
+            tabBarLabelPosition: 'below-icon',
+            tabBarIcon: ({focused}) => (
+            <Image source={require("./assets/icons/portfolio.png")} style={{width: 25, height: 25, tintColor: focused ? '#5e43ab' : '#a4a4a5'}} />)
+          }} />
+        <Tab.Screen name="Settings"
+          options={{
+            title: 'Settings',
+            tabBarLabel: ({focused, color, size}) => (
+              <Text style={{fontSize: 10, color: focused ? '#5e43ab' : '#a4a4a5'}}>Settings</Text>
+            ),
+            tabBarLabelPosition: 'below-icon',
+            tabBarIcon: ({focused}) => (
+            <Image source={require("./assets/icons/settings.png")} style={{width: 25, height: 25, tintColor: focused ? '#5e43ab' : '#a4a4a5'}} />)
+          }}>
+            {props => <Settings {...props} status={status} />}
+        </Tab.Screen>
+      </Tab.Navigator>
+    </NavigationContainer>
   );
-}
-
-class App extends Component {
-    render() {
-        return (
-          <NavigationContainer>
-          <Tabs/>
-        </NavigationContainer>
-        );
-    }
 }
 export default App;

@@ -8,7 +8,7 @@ import { useState } from "react";
 import {Pressable} from "react-native";
 import { Switch } from "react-native";
 
-function Settings(){
+function Settings({status}){
     const [upClicked,setUPClicked]=useState(false)
     const [notifications,setNotifications]=useState(false)
     const [security,setSecurity]=useState(false)
@@ -98,7 +98,7 @@ function Settings(){
             <ImageBackground source={require('../assets/bgimage.png')} style={styles.image}>
                 <View style={styles.container}>
                     <Text style={styles.titleText}>JustinThyme1</Text>
-                    <Button title="Log out"></Button>
+                    <Button onPress={()=>status()} title="Log out"></Button>
                     <View style={[styles.container2,{flexDirection: "column"}]}>
                         <View style={[styles.container2, { flexDirection: "row"}]}>
                             <Text style={styles.subjectText}>User Preferences</Text>

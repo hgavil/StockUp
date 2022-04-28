@@ -25,16 +25,25 @@ import Account from "./screens/Account";
 
 const Tab = createBottomTabNavigator();
 const HomeStackNav = createNativeStackNavigator();
+const LoginStackNav = createNativeStackNavigator();
 
 function HomeStackScreen() {
     return (
         <HomeStackNav.Navigator>
-            <HomeStackNav.Screen name="Login" component={Login}/>
             <HomeStackNav.Screen name="Home" component={HomeScreen}  />
             <HomeStackNav.Screen name="Account" component={Account}/>
 
         </HomeStackNav.Navigator>
-    )
+    );
+}
+
+function LoginStackScreen() {
+    return (
+        <LoginStackNav.Navigator initialRouteName="Login">
+            <LoginStackNav.Screen options={{headerShown: false}} name="Login" component={Login} />
+            <LoginStackNav.Screen options={{headerShown: false}} name="TabScreen" component={Tabs} />
+        </LoginStackNav.Navigator>
+    );
 }
 
 
@@ -81,8 +90,8 @@ class App extends Component {
     render() {
         return (
           <NavigationContainer>
-          <Tabs/>
-        </NavigationContainer>
+            <LoginStackScreen/>
+          </NavigationContainer>
         );
     }
 }

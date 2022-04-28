@@ -3,7 +3,8 @@ import {StatusBar} from "expo-status-bar";
 import React, {Component} from "react";
 import styles from "../styles/styles";
 import {ScrollView} from "react-native";
-import { TextInput } from "react-native-web";
+// import { TextInput } from "react-native-web";
+import { TextInput } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 class Login extends Component {
@@ -31,7 +32,7 @@ class Login extends Component {
                                     backgroundColor: pressed ? "#755FB1" : "#5E43AB",},
                                     styles.loginBut
                                 ]}
-                                onPress={() => this.props.navigation.navigate('HomeScreen')}>
+                                onPress={() => this.props.navigation.navigate('TabScreen')}>
                             <View>
                                 <Text style={{color:"#FFFFFF"}}>Login</Text>
                             </View>

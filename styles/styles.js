@@ -122,6 +122,14 @@ const styles = StyleSheet.create({
         shadowOffset: {width: 0, height: 2},
         margin: 5
     },
+    inputSimpleBorder: {
+        marginBottom: 15,
+        backgroundColor: "white",
+        borderWidth: 1,
+        borderColor: 'grey',
+        padding: 10,
+        fontSize: 20
+    },
 
     transactionItem: {
         fontSize:16

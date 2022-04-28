@@ -16,9 +16,16 @@ class Login extends Component {
             <View style={styles.backdrop}>
                 <ImageBackground source={require('../assets/bgimage.png')} style={styles.image}>
                     <Text style={styles.logo}>StockUp</Text>
+                    <View>
                         <TextInput
-                            placeholder = "Email"
+                            style={styles.inputSimpleBorder} 
+                            placeholder="Username"
                         />
+                        <TextInput
+                            style={styles.inputSimpleBorder} 
+                            placeholder="Password"
+                        />
+                    </View>
                     <View style={styles.buttoncont}>
                         <Pressable style={({pressed}) => [{
                                     backgroundColor: pressed ? "#755FB1" : "#5E43AB",},
@@ -26,7 +33,7 @@ class Login extends Component {
                                 ]}
                                 onPress={() => this.props.navigation.navigate('HomeScreen')}>
                             <View>
-                                <Text style={{color:"#FFFFFF",fontWeight: 500,}}>Login</Text>
+                                <Text style={{color:"#FFFFFF",fontWeight: 'bold',}}>Login</Text>
                             </View>
                         </Pressable>
                         <Pressable style={({pressed}) => [{
@@ -35,7 +42,7 @@ class Login extends Component {
                                 ]}
                                 onPress={() => this.props.navigation.navigate('HomeScreen')}>
                             <View>
-                                <Text style={{color:"#FFFFFF",fontWeight: 500,}}>Register</Text>
+                                <Text style={{color:"#FFFFFF",fontWeight: 'bold',}}>Register</Text>
                             </View>
                         </Pressable>
                     </View>

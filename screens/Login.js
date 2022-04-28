@@ -17,7 +17,7 @@ class Login extends Component {
             <View style={styles.backdrop}>
                 <ImageBackground source={require('../assets/bgimage.png')} style={styles.image}>
                     <Text style={styles.logo}>StockUp</Text>
-                    <View>
+                    <View style={{marginBottom:10, marginHorizontal:40}}>
                         <TextInput
                             style={styles.inputSimpleBorder} 
                             placeholder="Username"
@@ -26,6 +26,11 @@ class Login extends Component {
                             style={styles.inputSimpleBorder} 
                             placeholder="Password"
                         />
+                        <Text style={{color:"#FFFFFF", alignSelf:"flex-end", marginTop:10}}>Forgot Password</Text>
+                        <Switch
+  value={this.state.rememberMe}
+  onValueChange={(value) => this.toggleRememberMe(value)}
+  /><Text>Remember Me</Text>
                     </View>
                     <View style={styles.buttoncont}>
                         <Pressable style={({pressed}) => [{

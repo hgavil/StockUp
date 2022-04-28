@@ -11,7 +11,7 @@ function Login ({status}) {
         <View style={styles.backdrop}>
             <ImageBackground source={require('../assets/bgimage.png')} style={styles.image}>
                 <Text style={styles.logo}>StockUp</Text>
-                <View>
+                <View style={{width: '75%', alignSelf: "center"}}>
                     <TextInput
                         style={styles.inputSimpleBorder} 
                         placeholder="Username"
@@ -20,7 +20,7 @@ function Login ({status}) {
                         style={styles.inputSimpleBorder} 
                         placeholder="Password"
                     />
-                    <Text style={{color:"#FFFFFF", alignSelf:"flex-end", marginTop:10}}>Forgot Password</Text>
+                    <Text style={{color:"#FFFFFF", alignSelf:"flex-end", marginTop:15}}>Forgot Password</Text>
                 </View>
                 <View style={styles.buttoncont}>
                     <Pressable style={({pressed}) => [{

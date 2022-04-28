@@ -37,11 +37,11 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'grey',
         padding: 10,
-        fontSize: 20
+        fontSize: 20,
     },
     container: {
         backgroundColor: "#DFDBED",
-        flex: 1,
+        flexGrow: 1,
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
         width: '90%',
@@ -112,7 +112,8 @@ const styles = StyleSheet.create({
     buttoncont:
     {
         width:100,
-        alignSelf:'center'
+        alignSelf:'center',
+        marginTop: 10,
     },
     loginBut: {
         borderRadius: 8,
@@ -175,6 +176,21 @@ const styles = StyleSheet.create({
         textAlign: 'right'
       },
 
+      sellStockButton: {
+        borderRadius: 8,
+        padding: 6,
+        height: 30,
+        width: '100%',
+        alignSelf: 'center',
+        alignItems: 'center',
+        marginRight: 20,
+        elevation: 5,
+        shadowOpacity: 0.2,
+        shadowColor: 'black',
+        shadowRadius: 4,
+        shadowOffset: {width: 0, height: 2},
+    },
+
 
       accButton: {
           borderRadius: 8,
@@ -205,6 +221,13 @@ const styles = StyleSheet.create({
           fontWeight: 'bold',
           textAlign: 'right'
         },
+
+        dialogContainer: {
+            flex: 1,
+            backgroundColor: "#fff",
+            alignItems: "center",
+            justifyContent: "center",
+          },
 
 });
 

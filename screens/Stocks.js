@@ -1,7 +1,12 @@
 import {ImageBackground, Text, View, ScrollView, Image, Pressable} from "react-native";
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {StatusBar} from "expo-status-bar";
 import styles from "../styles/styles";
+import { useNavigation } from '@react-navigation/native'
+import Dialog from "react-native-dialog";
+
+/* Credits to mmazzarolo for the react-native-dialog functionality: https://github.com/mmazzarolo/react-native-dialog */
+
 
 function Stocks(props) {
 
@@ -35,9 +40,49 @@ function Stocks(props) {
     const {avgVolume} = props.route.params;
     const {avgVolumeScale} = props.route.params;
 
+    /* Setting up the sell button in the header. */
+    const nav = useNavigation();
+    useEffect(() => {
+      nav.setOptions({
+        headerRight: () =>  
+            <View>
+                <Pressable style={({pressed}) => [{backgroundColor: pressed ? "#755FB1" : "#5E43AB",}, styles.sellStockButton]} onPress={showDialog}>
+                    <View>
+                        <Text style={{color:"#FFFFFF"}}>Sell</Text>
+                    </View>
+                </Pressable>
+            </View>
+        })
+    });
+
+
+    /* Setting up dialog box functionality. */
+    const [visible, setVisible] = useState(false);
+
+    const showDialog = () => {
+      setVisible(true);
+    };
+  
+    const handleCancel = () => {
+      setVisible(false);
+    };
+  
+    const handleDelete = () => {
+      // The user has pressed the "Delete" button, so here you can do your own logic.
+      // ...Your logic
+      setVisible(false);
+    };
+
+
+
+
+
     return (
         
         <View style={styles.backdrop}>
+            <StatusBar style="auto" />
+
+
             <ImageBackground source={require('../assets/bgimage.png')} style={styles.image}>
                 <ScrollView contentContainerStyle={styles.container3}>
                     <Text style={styles.titleText}>{stockName}</Text>
@@ -74,6 +119,19 @@ function Stocks(props) {
                     
                 </ScrollView>
             </ImageBackground>
+
+            <View style={styles.dialogContainer}>
+                <Dialog.Container visible={visible}>
+                    <Dialog.Title>Sell Stock?</Dialog.Title>
+                    <Dialog.Description>
+                        How many shares do you want to sell?
+                    </Dialog.Description>
+                    <Dialog.Input placeholder="Enter amount here..." keyboardType="numeric">
+                    </Dialog.Input>
+                    <Dialog.Button label="Cancel" onPress={handleCancel} style={{fontWeight: 'bold'}} />
+                    <Dialog.Button label="Sell Stock" onPress={handleDelete} />
+                </Dialog.Container>
+            </View>
 
             <StatusBar style="auto" />
         </View>

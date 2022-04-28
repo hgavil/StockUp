@@ -75,7 +75,7 @@ function App(){
             tabBarIcon: ({focused}) => (
             <Image source={require("./assets/icons/home.png")} style={{ width: 25, height: 25, tintColor: focused ? '#5e43ab' : '#a4a4a5' }} />)
           }} />
-        <Tab.Screen name="Portfolio" component={PortfolioStackScreen}
+        <Tab.Screen name="PortfolioScreen" component={PortfolioStackScreen}
           options={{
             headerShown: false,
             // title: 'Portfolio',

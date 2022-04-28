@@ -33,7 +33,7 @@ class Login extends Component {
                                 ]}
                                 onPress={() => this.props.navigation.navigate('HomeScreen')}>
                             <View>
-                                <Text style={{color:"#FFFFFF",fontWeight: 'bold',}}>Login</Text>
+                                <Text style={{color:"#FFFFFF"}}>Login</Text>
                             </View>
                         </Pressable>
                         <Pressable style={({pressed}) => [{
@@ -42,7 +42,7 @@ class Login extends Component {
                                 ]}
                                 onPress={() => this.props.navigation.navigate('HomeScreen')}>
                             <View>
-                                <Text style={{color:"#FFFFFF",fontWeight: 'bold',}}>Register</Text>
+                                <Text style={{color:"#FFFFFF"}}>Register</Text>
                             </View>
                         </Pressable>
                     </View>

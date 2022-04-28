@@ -6,11 +6,11 @@ import {ScrollView} from "react-native";
 import { TextInput } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-function Login ({status, navigation}) {
+function Register ({status}) {
     return (
         <View style={styles.backdrop}>
             <ImageBackground source={require('../assets/bgimage.png')} style={styles.image}>
-                <Text style={styles.logo}>StockUp</Text>
+                <Text style={{fontSize:50, color:'white', alignSelf:'center', paddingBottom:20}}>Register</Text>
                 <View style={{width: '75%', alignSelf: "center"}}>
                     <TextInput
                         style={styles.inputSimpleBorder} 
@@ -20,7 +20,10 @@ function Login ({status, navigation}) {
                         style={styles.inputSimpleBorder} 
                         placeholder="Password"
                     />
-                    <Text style={{color:"#FFFFFF", alignSelf:"flex-end", marginTop:15}}>Forgot Password</Text>
+                    <TextInput
+                        style={styles.inputSimpleBorder}
+                        placeholder="Password (again)"
+                    />
                 </View>
                 <View style={styles.buttoncont}>
                     <Pressable style={({pressed}) => [{
@@ -28,15 +31,6 @@ function Login ({status, navigation}) {
                                 styles.loginBut
                             ]}
                             onPress={() => status()}>
-                        <View>
-                            <Text style={{color:"#FFFFFF"}}>Login</Text>
-                        </View>
-                    </Pressable>
-                    <Pressable style={({pressed}) => [{
-                                backgroundColor: pressed ? "#755FB1" : "#5E43AB",},
-                                styles.loginBut
-                            ]}
-                            onPress={() => navigation.navigate('Register')}>
                         <View>
                             <Text style={{color:"#FFFFFF"}}>Register</Text>
                         </View>
@@ -50,5 +44,5 @@ function Login ({status, navigation}) {
     );
 }
 
-export default Login;
+export default Register;
 

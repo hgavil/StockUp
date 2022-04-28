@@ -9,6 +9,7 @@ import Portfolio from "./screens/Portfolio";
 import Stocks from "./screens/Stocks";
 import Settings from "./screens/Settings";
 import Login from "./screens/Login"
+import Register from "./screens/Register";
 import "./styles/styles.js";
 import styles from "./styles/styles";
 import TabBarIcon from '@react-navigation/bottom-tabs/src/views/TabBarIcon';
@@ -50,6 +51,15 @@ function PortfolioStackScreen() {
   );
 }
 
+//function LoginStackScreen({status}) {
+//return (
+//    <LoginStackNav.Navigator>
+//        <LoginStackNav.Screen name="Login" component={Login} initialParams={{status:status}} />
+//        <LoginStackNav.Screen name="Register" component={Register} />
+//    </LoginStackNav.Navigator>
+//    );
+//}
+
 function App(){
   const [loginStatus,setStatus]=useState(false)
   const status=()=>{
@@ -58,7 +68,16 @@ function App(){
   if(!loginStatus)
   {
     return(
-      <Login status={status}/>
+        <NavigationContainer>
+            <LoginStackNav.Navigator>
+                <LoginStackNav.Screen name="Login" options={{headerShown: false}}>
+                    {(props) => <Login {...props} status={status}/>}
+                </LoginStackNav.Screen>
+                <LoginStackNav.Screen name="Register" options={{headerShown: false}}>
+                    {(props) => <Register {...props} status={status}/>}
+                </LoginStackNav.Screen>
+            </LoginStackNav.Navigator>
+       </NavigationContainer>
     )
   }
   return (

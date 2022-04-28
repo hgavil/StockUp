@@ -3,6 +3,8 @@ import {StatusBar} from "expo-status-bar";
 import React, {Component} from "react";
 import styles from "../styles/styles";
 import {ScrollView} from "react-native";
+import { TextInput } from "react-native-web";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 class Login extends Component {
     constructor(props) {
@@ -14,12 +16,15 @@ class Login extends Component {
             <View style={styles.backdrop}>
                 <ImageBackground source={require('../assets/bgimage.png')} style={styles.image}>
                     <Text style={styles.logo}>StockUp</Text>
+                        <TextInput
+                            placeholder = "Email"
+                        />
                     <View style={styles.buttoncont}>
                         <Pressable style={({pressed}) => [{
                                     backgroundColor: pressed ? "#755FB1" : "#5E43AB",},
                                     styles.loginBut
                                 ]}
-                                onPress={() => this.props.navigation.navigate('./screens/HomeScreen')}>
+                                onPress={() => this.props.navigation.navigate('HomeScreen')}>
                             <View>
                                 <Text style={{color:"#FFFFFF",fontWeight: 500,}}>Login</Text>
                             </View>
@@ -28,7 +33,7 @@ class Login extends Component {
                                     backgroundColor: pressed ? "#755FB1" : "#5E43AB",},
                                     styles.loginBut
                                 ]}
-                                onPress={() => this.props.navigation.navigate('./screens/HomeScreen')}>
+                                onPress={() => this.props.navigation.navigate('HomeScreen')}>
                             <View>
                                 <Text style={{color:"#FFFFFF",fontWeight: 500,}}>Register</Text>
                             </View>

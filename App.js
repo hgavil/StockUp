@@ -29,6 +29,7 @@ const HomeStackNav = createNativeStackNavigator();
 function HomeStackScreen() {
     return (
         <HomeStackNav.Navigator>
+            <HomeStackNav.Screen name="Login" component={Login}/>
             <HomeStackNav.Screen name="Home" component={HomeScreen}  />
             <HomeStackNav.Screen name="Account" component={Account}/>
 
@@ -80,8 +81,8 @@ class App extends Component {
     render() {
         return (
           <NavigationContainer>
-            <Tabs/>
-          </NavigationContainer>
+          <Tabs/>
+        </NavigationContainer>
         );
     }
 }

@@ -27,10 +27,6 @@ class Login extends Component {
                             placeholder="Password"
                         />
                         <Text style={{color:"#FFFFFF", alignSelf:"flex-end", marginTop:10}}>Forgot Password</Text>
-                        <Switch
-  value={this.state.rememberMe}
-  onValueChange={(value) => this.toggleRememberMe(value)}
-  /><Text>Remember Me</Text>
                     </View>
                     <View style={styles.buttoncont}>
                         <Pressable style={({pressed}) => [{

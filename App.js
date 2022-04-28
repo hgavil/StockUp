@@ -80,8 +80,8 @@ class App extends Component {
     render() {
         return (
           <NavigationContainer>
-          <Tabs/>
-      </NavigationContainer>
+            <Tabs/>
+          </NavigationContainer>
         );
     }
 }

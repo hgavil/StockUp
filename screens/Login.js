@@ -16,25 +16,23 @@ class Login extends Component {
                     <Text style={styles.logo}>StockUp</Text>
                     <View style={styles.buttoncont}>
                         <Pressable style={({pressed}) => [{
-                                    backgroundColor: pressed ? 'lightgray' : 'white',},
-                                    styles.accButton
+                                    backgroundColor: pressed ? "#755FB1" : "#5E43AB",},
+                                    styles.loginBut
                                 ]}
-                                onPress={() => Alert.alert('Button Pressed!')}>>
-                            <View style={{color:"#5E43AB"}}>
-                                <Text style={{color:"#FFFFFF"}}>Login</Text>
+                                onPress={() => this.props.navigation.navigate('./screens/HomeScreen')}>
+                            <View>
+                                <Text style={{color:"#FFFFFF",fontWeight: 500,}}>Login</Text>
                             </View>
                         </Pressable>
-                        <Button style={styles.stockButton}
-                            title="Login"
-                            color="#5E43AB"
-                            onPress={() => Alert.alert('Simple Button pressed')}
-                        />
-                        <Text> </Text>
-                        <Button style={styles.stockButton}
-                            title="Register"
-                            color="#5E43AB"
-                            onPress={() => Alert.alert('Simple Button pressed')}
-                        />
+                        <Pressable style={({pressed}) => [{
+                                    backgroundColor: pressed ? "#755FB1" : "#5E43AB",},
+                                    styles.loginBut
+                                ]}
+                                onPress={() => this.props.navigation.navigate('./screens/HomeScreen')}>
+                            <View>
+                                <Text style={{color:"#FFFFFF",fontWeight: 500,}}>Register</Text>
+                            </View>
+                        </Pressable>
                     </View>
                 </ImageBackground>
                 

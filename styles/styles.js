@@ -108,19 +108,18 @@ const styles = StyleSheet.create({
         alignSelf:'center'
     },
     loginBut: {
-        color:"#5E43AB",
         borderRadius: 8,
         padding: 6,
-        height: 60,
+        height: 40,
         width: '100%',
         justifyContent: 'center',
         alignSelf: 'center',
         alignItems: 'center',
         elevation: 5,
-        shadowOpacity: 0.4,
+        shadowOpacity: 0.8,
         shadowColor: 'black',
-        shadowRadius: 5,
-        shadowOffset: {width: -2, height: 2},
+        shadowRadius: 4,
+        shadowOffset: {width: 0, height: 2},
         margin: 5
     },
 

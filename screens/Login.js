@@ -20,6 +20,7 @@ function Login ({status}) {
                         style={styles.inputSimpleBorder} 
                         placeholder="Password"
                     />
+                    <Text style={{color:"#FFFFFF", alignSelf:"flex-end", marginTop:10}}>Forgot Password</Text>
                 </View>
                 <View style={styles.buttoncont}>
                     <Pressable style={({pressed}) => [{

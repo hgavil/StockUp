@@ -130,10 +130,9 @@ const styles = StyleSheet.create({
         margin: 5
     },
     inputSimpleBorder: {
-        marginBottom: 15,
         backgroundColor: "white",
         borderWidth: 1,
-        borderColor: 'grey',
+        borderColor: '#DDDDDD',
         padding: 10,
         fontSize: 20
     },

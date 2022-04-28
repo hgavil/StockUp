@@ -6,6 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import React, {Component} from "react";
 import HomeScreen from "./screens/HomeScreen";
 import Portfolio from "./screens/Portfolio";
+import Stocks from "./screens/Stocks";
 import Settings from "./screens/Settings";
 import Login from "./screens/Login"
 import "./styles/styles.js";
@@ -27,6 +28,7 @@ import { useState } from "react";
 const Tab = createBottomTabNavigator();
 const HomeStackNav = createNativeStackNavigator();
 const LoginStackNav = createNativeStackNavigator();
+const PortfolioStackNav = createNativeStackNavigator();
 
 function HomeStackScreen() {
     return (
@@ -36,6 +38,16 @@ function HomeStackScreen() {
 
         </HomeStackNav.Navigator>
     );
+}
+
+function PortfolioStackScreen() {
+  return (
+      <PortfolioStackNav.Navigator>
+          <PortfolioStackNav.Screen name="Portfolio" component={Portfolio}  />
+          <PortfolioStackNav.Screen name="Stocks" component={Stocks}/>
+
+      </PortfolioStackNav.Navigator>
+  );
 }
 
 function App(){
@@ -63,9 +75,10 @@ function App(){
             tabBarIcon: ({focused}) => (
             <Image source={require("./assets/icons/home.png")} style={{ width: 25, height: 25, tintColor: focused ? '#5e43ab' : '#a4a4a5' }} />)
           }} />
-        <Tab.Screen name="Portfolio" component={Portfolio}
+        <Tab.Screen name="Portfolio" component={PortfolioStackScreen}
           options={{
-            title: 'Portfolio',
+            headerShown: false,
+            // title: 'Portfolio',
             tabBarLabel: ({focused, color, size}) => (
               <Text style={{fontSize: 10, color: focused ? '#5e43ab' : '#a4a4a5'}}>Portfolio</Text>
             ),

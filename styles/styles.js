@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     },
     container3: {
         backgroundColor: "#DFDBED",
-        flex: 0,
+        flexGrow: 1,
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
         borderBottomLeftRadius: 20,

@@ -58,16 +58,16 @@ class Account extends Component {
                     renderItem={({item}) =>
                         <View>
                             <View style={{backgroundColor: 'white', flex: 1, flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 5}}>
-                                <View style={{ flex: .6, flexDirection: 'column', alignself: 'baseline', paddingVertical: 5}}>
+                                <View style={{ flex: 25, flexDirection: 'column', alignself: 'baseline', alignItems: "center", paddingVertical: 5}}>
                                     <Text style={styles.transactionItem}> {item.date} </Text>
                                 </View>
-                                <View style={{ flex: .8, flexDirection: 'column', alignself: 'baseline', paddingVertical: 5}}>
+                                <View style={{ flex: 32, flexDirection: 'column', alignself: 'baseline', alignItems: "center",  paddingVertical: 5}}>
                                     <Text style={styles.transactionItem}>{item.transaction} </Text>
                                 </View>
-                                <View style={{ flex: .5, flexDirection: 'column', alignself: 'baseline', paddingVertical: 5}}>
+                                <View style={{ flex: 21.5, flexDirection: 'column', alignself: 'baseline', alignItems: "center", paddingVertical: 5}}>
                                     <Text style={styles.transactionItem}> {item.amount} </Text>
                                 </View>
-                                <View style={{ flexDirection: 'column', alignself: 'baseline', paddingVertical: 5}}>
+                                <View style={{ flex: 21.5, flexDirection: 'column', alignself: 'baseline', alignItems: "center", paddingVertical: 5}}>
                                     <Text style={styles.transactionItem}> {item.reward} </Text>
                                 </View>
 

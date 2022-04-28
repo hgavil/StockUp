@@ -2,7 +2,7 @@ import {ImageBackground, Text, View, ScrollView, Image, Pressable} from "react-n
 import React, {useState, useEffect} from "react";
 import {StatusBar} from "expo-status-bar";
 import styles from "../styles/styles";
-import { useNavigation } from '@react-navigation/native'
+import { NavigationContainer, useNavigation } from '@react-navigation/native'
 import Dialog from "react-native-dialog";
 
 /* Credits to mmazzarolo for the react-native-dialog functionality: https://github.com/mmazzarolo/react-native-dialog */
@@ -40,6 +40,12 @@ function Stocks(props) {
     const {avgVolume} = props.route.params;
     const {avgVolumeScale} = props.route.params;
 
+
+    /* Variables to be changed later. */
+    const [newStockBalance, setNewStockBalance] = useState(stockBalance);
+    const [newShares, setNewShares] = useState(shares);
+
+
     /* Setting up the sell button in the header. */
     const nav = useNavigation();
     useEffect(() => {
@@ -58,24 +64,32 @@ function Stocks(props) {
 
     /* Setting up dialog box functionality. */
     const [visible, setVisible] = useState(false);
+    const [sellShareAmount, setSellShareAmount] = useState(0);
+    const [sellUSDAmount, setSellUSDAmount] = useState(0.00);
 
     const showDialog = () => {
       setVisible(true);
     };
-  
+
     const handleCancel = () => {
       setVisible(false);
+      setSellShareAmount(0);
+      setSellUSDAmount(0.00);
     };
   
-    const handleDelete = () => {
-      // The user has pressed the "Delete" button, so here you can do your own logic.
-      // ...Your logic
-      setVisible(false);
+    const handleSell = () => {
+        setVisible(false);
+        // shares = shares - sellShareAmount;
+        // stockBalance = shares * value;
+        // stockBalance = stockBalance - sellUSDAmount;
+
+
+        setNewShares(newShares-sellShareAmount);
+        setNewStockBalance(newStockBalance - sellUSDAmount);
+        setSellShareAmount(0);
+        setSellUSDAmount(0.00);
+
     };
-
-
-
-
 
     return (
         
@@ -89,7 +103,8 @@ function Stocks(props) {
                     <View style={styles.horizontalLine}/>
                     <Image source={require("../assets/chart.png")} style={{width: '90%', height: undefined, aspectRatio: 1.936507936507937}}/>
                     <Text style={{fontSize: 14, textAlign: 'center', marginTop: 10}} >Stock Balance</Text>
-                    <Text style={{fontSize: 36, textAlign: 'center', fontWeight: '500'}} >${stockBalance}</Text>
+                    <Text style={{fontSize: 36, textAlign: 'center', fontWeight: '500'}} >${newStockBalance}</Text>
+                    {/* Above: stockBalance changed to newStockBalance to show changes. */}
 
                     {/* View container for stock information.  */}
                     <View style={{flexDirection: 'row', width: '90%', marginTop: 10}}>
@@ -106,10 +121,11 @@ function Stocks(props) {
                         </View>
 
                         {/* Right column - data */}
+                        {/* Below: shares changed to newShares to show changes. */}
                         <View style={{flex: 1, flexDirection: 'column'}}>
                             <Text style={{fontSize: 14, textAlign: 'right', marginBottom: 5, fontWeight: '300'}} ></Text>
                             <Text style={{fontSize: 20, textAlign: 'right', marginBottom: 20, fontWeight: '500'}} >${value}</Text>
-                            <Text style={{fontSize: 20, textAlign: 'right', marginBottom: 20, fontWeight: '500'}} >{shares}</Text>
+                            <Text style={{fontSize: 20, textAlign: 'right', marginBottom: 20, fontWeight: '500'}} >{newShares}</Text>
                             <Text style={{fontSize: 20, textAlign: 'right', marginBottom: 20, fontWeight: '500'}} >{marketCap}{marketCapScale}</Text>
                             <Text style={{fontSize: 20, textAlign: 'right', marginBottom: 20, fontWeight: '500', color: stockDirection === 'UP' ? 'green' : 'red'}} >{stockDirection === 'UP' ? '+' : '-'}{change}%</Text>
                             <Text style={{fontSize: 20, textAlign: 'right', marginBottom: 20, fontWeight: '500'}} >{volume}{volumeScale}</Text>
@@ -126,10 +142,13 @@ function Stocks(props) {
                     <Dialog.Description>
                         How many shares do you want to sell?
                     </Dialog.Description>
-                    <Dialog.Input placeholder="Enter amount here..." keyboardType="numeric">
+                    <Dialog.Description style={{fontWeight: 'bold'}}>
+                        {sellShareAmount} share(s) = ${sellUSDAmount}
+                    </Dialog.Description>
+                    <Dialog.Input placeholder="Enter amount here..." keyboardType="numeric" onChangeText={(val) => (setSellShareAmount(val), setSellUSDAmount(val*value))}>
                     </Dialog.Input>
                     <Dialog.Button label="Cancel" onPress={handleCancel} style={{fontWeight: 'bold'}} />
-                    <Dialog.Button label="Sell Stock" onPress={handleDelete} />
+                    <Dialog.Button label="Sell Stock" onPress={handleSell} />
                 </Dialog.Container>
             </View>
 

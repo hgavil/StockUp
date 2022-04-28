@@ -1,24 +1,23 @@
 import {ImageBackground, Text, View, ScrollView, Image, Pressable} from "react-native";
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {StatusBar} from "expo-status-bar";
 import styles from "../styles/styles";
 
 function Portfolio(props) {
 
     const [portfolioTotalBalance, setPortfolioTotalBalance] = useState(877.07);
-    const [stock1Name, setStock1Name] = useState("AAPL");
+    const [stock1Name, setStock1Name] = useState('AAPL');
     const [stock1Balance, setStock1Balance] = useState(156.57);
     const [stock1Ticker, setStock1Ticker] = useState("DOWN");
-    const [stock2Name, setStock2Name] = useState("BBAI");
+    const [stock2Name, setStock2Name] = useState('BBAI');
     const [stock2Balance, setStock2Balance] = useState(470.47);
     const [stock2Ticker, setStock2Ticker] = useState("UP");
-    const [stock3Name, setStock3Name] = useState("JBLU");
+    const [stock3Name, setStock3Name] = useState('JBLU');
     const [stock3Balance, setStock3Balance] = useState(122.33);
     const [stock3Ticker, setStock3Ticker] = useState("DOWN");
-    const [stock4Name, setStock4Name] = useState("RIVN");
+    const [stock4Name, setStock4Name] = useState('RIVN');
     const [stock4Balance, setStock4Balance] = useState(109.21);
     const [stock4Ticker, setStock4Ticker] = useState("UP");
-
 
     return (
         <View style={styles.backdrop}>

@@ -79,9 +79,9 @@ function Tabs() {
 class App extends Component {
     render() {
         return (
-            <NavigationContainer>
-                <Tabs/>
-            </NavigationContainer>
+          <NavigationContainer>
+          <Tabs/>
+      </NavigationContainer>
         );
     }
 }

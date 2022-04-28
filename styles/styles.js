@@ -108,7 +108,20 @@ const styles = StyleSheet.create({
         alignSelf:'center'
     },
     loginBut: {
-        
+        color:"#5E43AB",
+        borderRadius: 8,
+        padding: 6,
+        height: 60,
+        width: '100%',
+        justifyContent: 'center',
+        alignSelf: 'center',
+        alignItems: 'center',
+        elevation: 5,
+        shadowOpacity: 0.4,
+        shadowColor: 'black',
+        shadowRadius: 5,
+        shadowOffset: {width: -2, height: 2},
+        margin: 5
     },
 
     transactionItem: {

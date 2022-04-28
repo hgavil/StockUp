@@ -26,6 +26,7 @@ import { useState } from "react";
 
 const Tab = createBottomTabNavigator();
 const HomeStackNav = createNativeStackNavigator();
+const LoginStackNav = createNativeStackNavigator();
 
 function HomeStackScreen() {
     return (
@@ -34,7 +35,7 @@ function HomeStackScreen() {
             <HomeStackNav.Screen name="Account" component={Account}/>
 
         </HomeStackNav.Navigator>
-    )
+    );
 }
 
 function App(){

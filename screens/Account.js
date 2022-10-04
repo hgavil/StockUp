@@ -2,6 +2,8 @@ import {FlatList, Text, View} from "react-native";
 import React, {useState} from "react";
 import styles from "../styles/styles";
 
+/* ABEL: Updated text styling for direct deposits or transfers to show green. 09/03/2022 */
+
 function Account(props) {
 
         const {accNum} = props.route.params;
@@ -33,16 +35,16 @@ function Account(props) {
                     <Text style={{fontSize: 50, textAlign:'center'}}>${accBal}</Text>
                     <Text style={{fontSize: 20, textAlign:'center', paddingTop: 20, paddingBottom:10}}>Transaction History</Text>
                     <View style={{backgroundColor: '#5E43AB', flexDirection: 'row', justifyContent: 'space-between', padding: 5}}>
-                        <View style={{ flex: .6, flexDirection: 'column', alignself: 'baseline'}}>
+                        <View style={{flex: 1, flexDirection: 'column', alignself: 'baseline', alignItems: 'center'}}>
                             <Text style={styles.transactionTableHeader}> Date </Text>
                         </View>
-                        <View style={{ flex: .8, flexDirection: 'column', alignself: 'baseline'}}>
+                        <View style={{flex: 1.6, flexDirection: 'column', alignself: 'baseline', alignItems: 'center'}}>
                             <Text style={styles.transactionTableHeader}> Transaction </Text>
                         </View>
-                        <View style={{ flex: .5, flexDirection: 'column', alignself: 'baseline'}}>
+                        <View style={{flex: 1, flexDirection: 'column', alignself: 'baseline', alignItems: 'center'}}>
                             <Text style={styles.transactionTableHeader}> Amount </Text>
                         </View>
-                        <View style={{ flexDirection: 'column', alignself: 'baseline'}}>
+                        <View style={{flex: 1, flexDirection: 'column', alignself: 'baseline', alignItems: 'center'}}>
                             <Text style={styles.transactionTableHeader}> Reward </Text>
                         </View>
                     </View>
@@ -50,17 +52,17 @@ function Account(props) {
                         data={transactions}
                         renderItem={({item}) =>
                             <View>
-                                <View style={{backgroundColor: 'white', flex: 1, flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 5}}>
-                                    <View style={{ flex: 25, flexDirection: 'column', alignself: 'baseline', alignItems: "center", paddingVertical: 5}}>
+                                <View style={{backgroundColor: 'white', flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 5}}>
+                                    <View style={{ flex: 1, flexDirection: 'column', alignself: 'baseline', alignItems: "center", paddingVertical: 5}}>
                                         <Text style={styles.transactionItem}> {item.date} </Text>
                                     </View>
-                                    <View style={{ flex: 32, flexDirection: 'column', alignself: 'baseline', alignItems: "center",  paddingVertical: 5}}>
+                                    <View style={{ flex: 1.6, flexDirection: 'column', alignself: 'baseline', alignItems: "center",  paddingVertical: 5}}>
                                         <Text style={styles.transactionItem}>{item.transaction} </Text>
                                     </View>
-                                    <View style={{ flex: 21.5, flexDirection: 'column', alignself: 'baseline', alignItems: "center", paddingVertical: 5}}>
-                                        <Text style={styles.transactionItem}> {item.amount} </Text>
+                                    <View style={{ flex: 1, flexDirection: 'column', alignself: 'baseline', alignItems: "center", paddingVertical: 5}}>
+                                        <Text style={(item.transaction == 'DIRECT DEPOSIT' || item.transaction == 'TRANSFER') ? styles.transactionItemGreen : styles.transactionItem}> {item.amount} </Text>
                                     </View>
-                                    <View style={{ flex: 21.5, flexDirection: 'column', alignself: 'baseline', alignItems: "center", paddingVertical: 5}}>
+                                    <View style={{ flex: 1, flexDirection: 'column', alignself: 'baseline', alignItems: "center", paddingVertical: 5}}>
                                         <Text style={styles.transactionItem}> {item.reward} </Text>
                                     </View>
                                 </View>
@@ -78,31 +80,31 @@ function Account(props) {
                 <Text style={{fontSize: 50, textAlign:'center'}}>${accBal}</Text>
                 <Text style={{fontSize: 20, textAlign:'center', paddingTop: 20, paddingBottom:10}}>Transaction History</Text>
                 <View style={{backgroundColor: '#5E43AB', flexDirection: 'row', justifyContent: 'space-between', padding: 5}}>
-                    <View style={{ flex: .6, flexDirection: 'column', alignself: 'baseline'}}>
+                    <View style={{ flex: 1, flexDirection: 'column', alignself: 'baseline', alignItems: 'center'}}>
                         <Text style={styles.transactionTableHeader}> Date </Text>
                     </View>
-                    <View style={{ flex: .8, flexDirection: 'column', alignself: 'baseline'}}>
+                    <View style={{ flex: 1.6, flexDirection: 'column', alignself: 'baseline', alignItems: 'center'}}>
                         <Text style={styles.transactionTableHeader}> Transaction </Text>
                     </View>
-                    <View style={{ flex: .5, flexDirection: 'column', alignself: 'baseline'}}>
+                    <View style={{ flex: 1, flexDirection: 'column', alignself: 'baseline', alignItems: 'center'}}>
                         <Text style={styles.transactionTableHeader}> Amount </Text>
                     </View>
-                    <View style={{ flexDirection: 'column', alignself: 'baseline'}}>
+                    <View style={{ flex: 1, flexDirection: 'column', alignself: 'baseline', alignItems: 'center'}}>
                         <Text style={styles.transactionTableHeader}> Reward </Text>
                     </View>
                 </View>
 
-                <View style={{backgroundColor: 'white', flex: 1, flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 5}}>
-                    <View style={{ flex: 25, flexDirection: 'column', alignself: 'baseline', alignItems: "center", paddingVertical: 5}}>
+                <View style={{backgroundColor: 'white', flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 5}}>
+                    <View style={{ flex: 1, flexDirection: 'column', alignself: 'baseline', alignItems: "center", paddingVertical: 5}}>
                         <Text style={styles.transactionItem}> 04/28/2022 </Text>
                     </View>
-                    <View style={{ flex: 32, flexDirection: 'column', alignself: 'baseline', alignItems: "center",  paddingVertical: 5}}>
+                    <View style={{ flex: 1.6, flexDirection: 'column', alignself: 'baseline', alignItems: "center",  paddingVertical: 5}}>
                         <Text style={styles.transactionItem}> TRANSFER </Text>
                     </View>
-                    <View style={{ flex: 22.5, flexDirection: 'column', alignself: 'baseline', alignItems: "center", paddingVertical: 5}}>
-                        <Text style={styles.transactionItem}> +$1422.01 </Text>
+                    <View style={{ flex: 1, flexDirection: 'column', alignself: 'baseline', alignItems: "center", paddingVertical: 5}}>
+                        <Text style={styles.transactionItemGreen}> +$1422.01 </Text>
                     </View>
-                    <View style={{ flex: 21.5, flexDirection: 'column', alignself: 'baseline', alignItems: "center", paddingVertical: 5}}>
+                    <View style={{ flex: 1, flexDirection: 'column', alignself: 'baseline', alignItems: "center", paddingVertical: 5}}>
                         <Text style={styles.transactionItem}> - </Text>
                     </View>
                 </View>

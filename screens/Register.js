@@ -6,23 +6,31 @@ import {ScrollView} from "react-native";
 import { TextInput } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+/* ABEL: Updated password fields for secure text entry. 09/03/2022 */
+
 function Register ({status}) {
     return (
         <View style={styles.backdrop}>
             <ImageBackground source={require('../assets/bgimage.png')} style={styles.image}>
+            <ScrollView contentContainerStyle={{flexGrow: 1, justifyContent: "center"}}>
                 <Text style={{fontSize:50, color:'white', alignSelf:'center', paddingBottom:20}}>Register</Text>
                 <View style={{width: '75%', alignSelf: "center"}}>
                     <TextInput
                         style={styles.inputSimpleBorder} 
                         placeholder="Username"
+                        placeholderTextColor="#C7C7CD"
                     />
                     <TextInput
                         style={styles.inputSimpleBorder} 
                         placeholder="Password"
+                        placeholderTextColor="#C7C7CD"
+                        secureTextEntry={true}
                     />
                     <TextInput
                         style={styles.inputSimpleBorder}
                         placeholder="Password (again)"
+                        placeholderTextColor="#C7C7CD"
+                        secureTextEntry={true}
                     />
                 </View>
                 <View style={styles.buttoncont}>
@@ -36,6 +44,7 @@ function Register ({status}) {
                         </View>
                     </Pressable>
                 </View>
+                </ScrollView>
             </ImageBackground>
             
 

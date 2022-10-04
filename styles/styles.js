@@ -141,6 +141,10 @@ const styles = StyleSheet.create({
     transactionItem: {
         fontSize:16
     },
+    transactionItemGreen: {
+        fontSize:16,
+        color: 'green'
+    },
     transactionTableHeader: {
         fontSize:16,
         color:'white'
@@ -166,14 +170,14 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: 'black',
         fontWeight: 'bold',
-        textAlign: 'left'
+        textAlign: 'left',
       },
 
       stockButtonTextRight: {
         fontSize: 16,
         color: 'black',
         fontWeight: 'bold',
-        textAlign: 'right'
+        textAlign: 'right',
       },
 
       sellStockButton: {

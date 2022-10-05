@@ -22,8 +22,12 @@ Information about setting up the React Native and Expo environments are here:
 * [React Native](https://reactnative.dev/docs/environment-setup)
 * [Expo](https://docs.expo.dev/get-started/installation/)
 
-You can check your version of Node and npm in your terminal using 
+You can check your version of Node and npm in your terminal using the following commands:
+
+ 
 `node --version`
+
+
 `npm --version`
 
 Typically, once Node is installed you can run the command

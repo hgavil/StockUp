@@ -57,7 +57,7 @@ Project is created with:
 * npm v8.3.1
 
 ## Credits
-* **Login:** [Diana Villanueva](https://github.com/dvilla55), [Moody Samkary](https://github.com/MoodyAmroSamkary)
+* **Login:** [Moody Samkary](https://github.com/MoodyAmroSamkary), [Diana Villanueva](https://github.com/dvilla55)
 * **Register:** [Diana Villaneuva](https://github.com/dvilla55)
 * **Home:** [Hannah Gavilan](https://github.com/hgavil)
 * **Accounts:** [Hannah Gavilan](https://github.com/hgavil), [Abel Abraham](https://github.com/Abelaj50)

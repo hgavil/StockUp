@@ -30,7 +30,7 @@ You can check your version of Node and npm in your terminal using the following 
 
 `npm --version`
 
-Typically, once Node is installed you can run the command
+Once Node is installed you can run the command
 `npm install -g expo-cli`
 within your terminal to install Expo. 
 

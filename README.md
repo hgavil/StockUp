@@ -34,16 +34,16 @@ Once Node is installed you can run the command
 `npm install -g expo-cli`
 within your terminal to install Expo. 
 
-Once the development environment has been set up, download and navigate to the project folder within your terminal and run `npm start`. You can chose to view the application on a web browser (press "w"), using Android or iOS simulators (press "a" or "i"), or using your physical mobile device using the Expo Go app (scan the QR code in the terminal using Expo Go on Android or with the default Camera app on iOS). On launch, you should be welcomed by the login screen: 
+Once the development environment has been set up, download and navigate to the project folder within your terminal and run with `npm start`. You can chose to view the application on a web browser (press "w"), using Android or iOS simulators (press "a" or "i"), or using your physical mobile device using the Expo Go app (scan the QR code in the terminal using Expo Go on Android or with the default Camera app on iOS). On launch, you should be welcomed by the login screen: 
 
-<!--![Login](images/login.png)-->
 <p align="middle">
     <img src="https://github.com/hgavil/StockUp/blob/master/images/login.png" width=60% height=60%>
 </p>
 
+As StockUp is mainly a front-end implementation, no login or registration information is actually needed as input, so feel free to simply login and play around with the app. The Login and Register screens will eventually lead to the Home screen, where the user is greeted with a welcome message and is able to check at a glance their balances in various accounts. The first account listed is meant to replicate the Apollo debit card, and the second is meant to replicate a potential savings account. Clicking on each account button will take you to its full details, showing the transaction history and rewards of stock earned by using the card. 
+
 ## Project Requirements
 
-<!--![Account](images/account.png)-->
 <p float="left">
     <img src="https://github.com/hgavil/StockUp/blob/master/images/account.png" width=49% height=49%>
     <img src="https://github.com/hgavil/StockUp/blob/master/images/portfolio.png" width=49% height=49%>

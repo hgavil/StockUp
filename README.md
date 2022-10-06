@@ -41,7 +41,7 @@ Once the development environment has been set up, download and navigate to the p
 ## Project Requirements
 
 <!--![Account](images/account.png)-->
-<p float="left">
+<p align="middle">
     <img src="https://github.com/hgavil/StockUp/blob/master/images/account.png" width=49% height=49%>
     <img src="https://github.com/hgavil/StockUp/blob/master/images/portfolio.png" width=49% height=49%>
 </p>

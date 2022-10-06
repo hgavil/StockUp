@@ -51,10 +51,10 @@ The game is simple enough to play (but tricky to beat!) and instructions are pro
     
 ## Technologies
 Project is created with:
-* React v17.0.1
-* React Native v0.07.2
-* Node.js v16.15.0
-* npm v8.3.1
+* React version 17.0.1
+* React Native version 0.07.2
+* Node.js version 16.15.0
+* npm version 8.3.1
 
 ## Credits
 * **Login:** [Diana Villanueva](https://github.com/dvilla55), [Moody Samkary](https://github.com/MoodyAmroSamkary)
@@ -67,9 +67,9 @@ Project is created with:
 
 All credits to technologies used are given to their owners and all items specified in their respective licenses are adhered to throughout this project. Credits to:
 * [mmazzarolo](https://github.com/mmazzarolo/react-native-dialog.git) for the react-native-dialog library.
-* [Freepik](https://www.flaticon.com/free-icon/house-outline_25794?term=home&page=1&position=36&page=1&position=36&related_id=25794&origin=style) for the home icon.
-* [Dimitry Miroliubov](https://www.flaticon.com/free-icon/briefcase_639394?term=portfolio&page=1&position=1&page=1&position=1&related_id=639394&origin=style) for the portfolio icon.
-* [Gregor Cesnar Premium](https://www.flaticon.com/free-icon/settings_563541?term=settings&page=1&position=1&page=1&position=1&related_id=563541&origin=style) for the settings icon.
+* [Freepik](https://www.flaticon.com/free-icon/house-outline_25794?term=home&page=1&position=36&page=1&position=36&related_id=25794&origin=style) for the Home icon.
+* [Dimitry Miroliubov](https://www.flaticon.com/free-icon/briefcase_639394?term=portfolio&page=1&position=1&page=1&position=1&related_id=639394&origin=style) for the Portfolio icon.
+* [Gregor Cesnar Premium](https://www.flaticon.com/free-icon/settings_563541?term=settings&page=1&position=1&page=1&position=1&related_id=563541&origin=style) for the Settings icon.
 
 Special thanks to Professor Nikita Soni and our TA Hasti Sharifi for bringing us together to work on this project and all their oversight and guidance! We had a lot of fun working together. 
 

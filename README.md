@@ -84,6 +84,7 @@ The **Settings** screen is also accessible by the tab navigator at the bottom, a
 * Create an interactive pixel-perfect prototype.
     * Prototype should contain every possible transition and feature that is included in your design.
     * No non-functional interface elements should be present.
+    * [Click here](https://projects.invisionapp.com/share/QV12KQUY2TZ7#/screens) to see our prototype!
 * Create a 5-slide presentation and prepare a demo script highlighting 3 key features.
 * Create a working UI with a fully functional front-end and live user interactions.
     * Your implementation should not have a server-side component.

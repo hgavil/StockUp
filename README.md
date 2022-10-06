@@ -34,7 +34,7 @@ Once Node is installed you can run the command
 `npm install -g expo-cli`
 within your terminal to install Expo. 
 
-Once the development environment has been set up, download and navigate to the project folder within your terminal and run with `npm start`. You can chose to view the application on a web browser (press "w"), using Android or iOS simulators (press "a" or "i"), or using your physical mobile device using the Expo Go app (scan the QR code in the terminal using Expo Go on Android or with the default Camera app on iOS). On launch, you should be welcomed by the login screen: 
+Once the development environment has been set up, download and navigate to the project folder within your terminal and run with `npm start`. You can chose to view the application on a web browser (press "w"), using Android or iOS simulators (press "a" or "i"), or using your physical mobile device using the Expo Go app (scan the QR code in the terminal using Expo Go on Android or with the default Camera app on iOS). On launch, you should be welcomed by the **Login** screen: 
 
 <p align="middle">
     <img src="https://github.com/hgavil/StockUp/blob/master/images/login.png" width=60% height=60%>
@@ -52,8 +52,9 @@ The **Portfolio** screen, accessible by the tab navigator at the bottom, display
 Pressing on an individual stock button brings about the **Stock** screen, which displays an arbitrary graph of that stock's movement over time, the total balance of that stock the user has earned, and various information about that stock just below. The user is also able to sell shares of stock (similar to cashing out on rewards) by pressing the "Sell" button in the top right corner. A dialog box will then prompt the user for the amount of shares to sell, and simultaneously displays a live conversion of that share amount into USD. When the user sells stock, the amount of shares and balance of that stock on that stock's screen is updated, as well as the portfolio balance and that stock's balance on on the Portfolio screen.
 
 <p float="left">
-    <img src="https://github.com/hgavil/StockUp/blob/master/images/portfolio.png" width=49% height=49%>
-    <img src="https://github.com/hgavil/StockUp/blob/master/images/stock.png" width=49% height=49%>
+    <img src="https://github.com/hgavil/StockUp/blob/master/images/portfolio.png" width=32% height=32%>
+    <img src="https://github.com/hgavil/StockUp/blob/master/images/stock.png" width=32% height=32%>
+    <img src="https://github.com/hgavil/StockUp/blob/master/images/sellStock.png" width=32% height=32%>
 </p>
 
 ## Project Requirements

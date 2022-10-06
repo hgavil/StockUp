@@ -64,7 +64,7 @@ function Stocks({setPortfolioBalance, setS1Balance, setS2Balance, setS3Balance, 
     const handleSell = () => {
         
         /* If the user has entered a valid number of shares to sell. */
-        if(sellShareAmount > 0) {
+        if(sellShareAmount > 0 && sellUSDAmount <= newStockBalance) {
 
             setVisible(false);
 

@@ -47,13 +47,16 @@ As StockUp is mainly a *front-end implementation*, no login or registration info
     <img src="https://github.com/hgavil/StockUp/blob/master/images/account.png" width=49% height=49%>
 </p>
 
-## Project Requirements
+The Portfolio screen, accessible by the tab navigator at the bottom, displays an overview of the rewards of stock the user has earned. An arbitrary graph displays the portfolio value over time with the total balance of the portfolio just below. Earned stocks are shown in pressable buttons, with ticker values indicating direction for the day and the balance of that stock to the right.
+
+Pressing on an individual stock button brings about the Stock screen, which displays an arbitrary graph of that stock's movement over time, the total balance of that stock the user has earned, and various information about that stock just below. The user is also able to sell shares of stock (similar to cashing out on rewards) by pressing the "Sell" button in the top right corner. A dialog box will then prompt the user for the amount of shares to sell, and simultaneously displays a live conversion of that share amount into USD. When the user sells stock, the amount of shares and balance of that stock on that stock's screen is updated, as well as the portfolio balance and that stock's balance on on the Portfolio screen.
 
 <p float="left">
-    <img src="https://github.com/hgavil/StockUp/blob/master/images/account.png" width=49% height=49%>
     <img src="https://github.com/hgavil/StockUp/blob/master/images/portfolio.png" width=49% height=49%>
+    <img src="https://github.com/hgavil/StockUp/blob/master/images/stock.png" width=49% height=49%>
 </p>
 
+## Project Requirements
 The game is simple enough to play (but tricky to beat!) and instructions are provided in the help menu upon loading the game. They will also be referenced here: 
 * **Controls:** W, A, S, D to move forward, view left, move backward, and view right accordingly. Space is to jump/power jump. Left click is to give out donuts.
 * **Workers** may or may not have a "high temperature". There are 4 workers with a high temperature, and the rest do not. Your job is to seek out those 4 workers and give them each a donut. They are scattered throughout the office and some may be in hard to find locations.

@@ -36,16 +36,14 @@ within your terminal to install Expo.
 
 Once the development environment has been set up, download and navigate to the project folder within your terminal and run `npm start`. You can chose to view the application on a web browser (press "w"), using Android or iOS simulators (press "a" or "i"), or using your physical mobile device using the Expo Go app (scan the QR code in the terminal using Expo Go on Android or with the default Camera app on iOS). On launch, you should be welcomed by the login screen: 
 
-<!--![Login](images/login.png)-->
-
-<img src="https://github.com/hgavil/StockUp/blob/master/images/login.png" width=75% height=75%>
+![Login](images/login.png)
 
 ## Project Requirements
 
 <!--![Account](images/account.png)-->
 
-<img src="https://github.com/hgavil/StockUp/blob/master/images/account.png" width=50% height=50%>
-<img src="https://github.com/hgavil/StockUp/blob/master/images/portfolio.png" width=50% height=50%>
+<img src="https://github.com/hgavil/StockUp/blob/master/images/account.png" width=49% height=49%>
+<img src="https://github.com/hgavil/StockUp/blob/master/images/portfolio.png" width=49% height=49%>
 
 The game is simple enough to play (but tricky to beat!) and instructions are provided in the help menu upon loading the game. They will also be referenced here: 
 * **Controls:** W, A, S, D to move forward, view left, move backward, and view right accordingly. Space is to jump/power jump. Left click is to give out donuts.

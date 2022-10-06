@@ -52,9 +52,9 @@ The **Portfolio** screen, accessible by the tab navigator at the bottom, display
 Pressing on an individual stock button brings about the **Stock** screen, which displays an arbitrary graph of that stock's movement over time, the total balance of that stock the user has earned, and various information about that stock just below. The user is also able to sell shares of stock (similar to cashing out on rewards) by pressing the "Sell" button in the top right corner. A dialog box will then prompt the user for the amount of shares to sell, and simultaneously displays a live conversion of that share amount into USD. When the user sells stock, the amount of shares and balance of that stock on that stock's screen is updated, as well as the portfolio balance and that stock's balance on on the Portfolio screen.
 
 <p float="left">
-    <img src="https://github.com/hgavil/StockUp/blob/master/images/portfolio.png" width=33% height=33%>
-    <img src="https://github.com/hgavil/StockUp/blob/master/images/stock.png" width=33% height=33%>
-    <img src="https://github.com/hgavil/StockUp/blob/master/images/sellStock.png" width=33% height=33%>
+    <img src="https://github.com/hgavil/StockUp/blob/master/images/portfolio.png" width=32% height=32%>
+    <img src="https://github.com/hgavil/StockUp/blob/master/images/stock.png" width=32% height=32%>
+    <img src="https://github.com/hgavil/StockUp/blob/master/images/sellStock.png" width=32% height=32%>
 </p>
 
 ## Project Requirements

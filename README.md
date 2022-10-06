@@ -38,7 +38,7 @@ Once the development environment has been set up, download and navigate to the p
 
 <!--![Login](images/login.png)-->
 
-<img src="https://github.com/hgavil/StockUp/blob/master/images/login.png" width=50% height=50%>
+<img src="https://github.com/hgavil/StockUp/blob/master/images/login.png" width=75% height=75%>
 
 ## Project Requirements
 

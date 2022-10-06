@@ -57,12 +57,40 @@ Pressing on an individual stock button brings about the **Stock** screen, which 
     <img src="https://github.com/hgavil/StockUp/blob/master/images/sellStock.png" width=32% height=32%>
 </p>
 
+The **Settings** screen is also accessible by the tab navigator at the bottom, and is initially collapsed and displays the username of the user as well as a Log out button underneath. Pressing the chevrons next to the three different type of settings subtitles reveals options that can be set for the app, which can then be enabled/disabled or changed for preference. Pressing the Log out button will log the user out of the app.
+
+<p float="left">
+    <img src="https://github.com/hgavil/StockUp/blob/master/images/settings1.png" width=49% height=49%>
+    <img src="https://github.com/hgavil/StockUp/blob/master/images/settings2.png" width=49% height=49%>
+</p>
+
 ## Project Requirements
-The game is simple enough to play (but tricky to beat!) and instructions are provided in the help menu upon loading the game. They will also be referenced here: 
-* **Controls:** W, A, S, D to move forward, view left, move backward, and view right accordingly. Space is to jump/power jump. Left click is to give out donuts.
-* **Workers** may or may not have a "high temperature". There are 4 workers with a high temperature, and the rest do not. Your job is to seek out those 4 workers and give them each a donut. They are scattered throughout the office and some may be in hard to find locations.
-* **Donuts** are given by left click, and may be restocked at the donut station close to the original spawn point. The player may only hold 3 donuts at one time, however, so a minimum of one restock is necessary to win.
-* **Timing** is essential! You only have 3 minutes to seek out all the workers with a high temperature and give them each a donut. Good luck!
+* Pick a startup that has articulated a problem that it's trying to solve.
+    * Ignore any interfaces they’ve built already.
+    * Come up with your own solution and design using only their problem description.
+* Create a 6-minute proposal idea video.
+* Create a discussion guide based on the focus setting.
+    * Your group will use this during user research.
+* Conduct focus groups and interviews.
+    * Recruit and conduct one or more focus groups.
+    * Each focus group should have at least 3 users from your target population.
+    * Conducting one-on-one interviews is recommended but not required.
+    * Should talk to 6 to 8 target users total for both focus groups and interviews.
+* Walk the data using affinity diagramming to analyze the results of focus groups/interviews.
+    * Identify the main user needs that seem to be emerging.
+    * Identifty users’ goals, priorities, preferences, and experiences.
+* Create 2-3 personas.
+* Create task flow(s) and wireframe(s) for your initial app design.
+* Create an interactive pixel-perfect prototype.
+    * Prototype should contain every possible transition and feature that is included in your design.
+    * No non-functional interface elements should be present.
+* Create a 5-slide presentation and prepare a demo script highlighting 3 key features.
+* Create a working UI with a fully functional front-end and live user interactions.
+    * Your implementation should not have a server-side component.
+    * Your application should not have its own backend (Django, Rails, or MySQL).
+* Create a video sketch, poster, and complete the design documentation paper.
+* Present your project at the final showcasing in front of a live audience of UIC guests.
+
     
 ## Technologies
 Project is created with:
@@ -89,6 +117,6 @@ All credits to technologies used are given to their owners and all items specifi
 Special thanks to Professor Nikita Soni and our TA Hasti Sharifi for bringing us together to work on this project and all their oversight and guidance! We had a lot of fun working together. 
 
 ## Live Demo
-The following link leads to a visual demonstration of the project.
-* https://www.evl.uic.edu/cs426/finals/2021-Spring/Videos/BrainTemp300.mp4
+The following link leads to a live demonstration of the project.
+* https://snack.expo.dev/@abelaj50/8892a2?platform=ios
 

@@ -13,7 +13,7 @@ StockUp is a fully functional design and working UI implementation based on [Apo
 This project is the final project for CS 422 (User Interface Design and Programming) at the University of Illinois at Chicago, Spring 2022. We were put into student groups of 3 or 4 members working as designers to design an interface for an emerging startup of our choice. We were required to follow the design process covered in the course to understand user needs, generate design ideas, refine our design ideas to generate an interactive high-fidelity prototype, build a working UI implementation of our prototype, and conduct user testing. The final day of the course included a public showcasing event which was attended by members of the UIC community.
 
 ## Getting Started
-Before you begin, please make sure you have **Node.js**, **React**, and **Expo** installed, and ensure that you are running ***Node version >= 14.0.0*** and ***npm version >= 5.6.0***. Links to Node.js are provided below:
+Before you begin, please make sure you have **Node.js**, **React**, and **Expo** installed, and ensure that you are running Node version >= 14.0.0 and npm version >= 5.6.0. Links to Node.js are provided below:
 * Windows: https://nodejs.org/dist/v16.17.1/node-v16.17.1-x86.msi
 * Mac: https://nodejs.org/dist/v16.17.1/node-v16.17.1.pkg
 * Linux: https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.xz

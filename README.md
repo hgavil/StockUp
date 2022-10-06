@@ -1,5 +1,5 @@
 # StockUp
-StockUp is a fully functional design and working UI implementation based on [Apollo](https://www.withapollo.com/), an early-stage startup from Y Combinator's Summer 2021 cohort. StockUp demonstrates the interface and experience interacting with a digital debit card that earns you shares of stock for purchases made. Created as the final project of CS 422 (User Interface Design and Programming, Spring 2022) at the University of Illinois at Chicago, this working UI implementation is the culmination of our team's research throughout the semester, utilizing methods learned in the course, to develop an interface that exemplifies a positive user experience. Developed using React Native.
+StockUp is a fully functional design and working UI implementation based on [Apollo](https://www.withapollo.com/), an early-stage startup from Y Combinator's Summer 2021 cohort. StockUp simulates the interface and experience interacting with a digital debit card that earns you shares of stock for purchases made. Created as the final project of CS 422 (User Interface Design and Programming, Spring 2022) at the University of Illinois at Chicago, this working UI implementation is the culmination of our team's research throughout the semester, utilizing methods learned in the course, to develop an interface that exemplifies a positive user experience. Developed using React Native.
 
 ## Table of contents
 * [General Info](#general-info)
@@ -34,10 +34,9 @@ Once Node is installed you can run the command
 `npm install -g expo-cli`
 within your terminal to install Expo. 
 
-Once the development environment has been set up, download and navigate to the project folder within your terminal and run `npm start`. You can chose to view the application on a web browser (press "w"), using Android or iOS simulators (press "a" or "i"), or using your physical mobile device using the Expo Go app (scan the QR code in the terminal using Expo Go on Android or the default Camera app on iOS). On launch, you should be welcomed by the login screen: 
+Once the development environment has been set up, download and navigate to the project folder within your terminal and run `npm start`. You can chose to view the application on a web browser (press "w"), using Android or iOS simulators (press "a" or "i"), or using your physical mobile device using the Expo Go app (scan the QR code in the terminal using Expo Go on Android or with the default Camera app on iOS). On launch, you should be welcomed by the login screen: 
 
 ![Login](images/login.png)
-
 
 ## Project Requirements
 

@@ -37,9 +37,9 @@ within your terminal to install Expo.
 Once the development environment has been set up, download and navigate to the project folder within your terminal and run `npm start`. You can chose to view the application on a web browser (press "w"), using Android or iOS simulators (press "a" or "i"), or using your physical mobile device using the Expo Go app (scan the QR code in the terminal using Expo Go on Android or with the default Camera app on iOS). On launch, you should be welcomed by the login screen: 
 
 <!--![Login](images/login.png)-->
-
-<img src="https://github.com/hgavil/StockUp/blob/master/images/login.png" width=60% height=60%>
-
+<p align="middle">
+    <img src="https://github.com/hgavil/StockUp/blob/master/images/login.png" width=60% height=60%>
+</p>
 
 ## Project Requirements
 

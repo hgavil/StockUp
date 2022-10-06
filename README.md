@@ -42,8 +42,8 @@ Once the development environment has been set up, download and navigate to the p
 
 <!--![Account](images/account.png)-->
 <p float="left">
-    <img src="https://github.com/hgavil/StockUp/blob/master/images/account.png" width=30% height=30%>
-    <img src="https://github.com/hgavil/StockUp/blob/master/images/portfolio.png" width=30% height=30%>
+    <img src="https://github.com/hgavil/StockUp/blob/master/images/account.png" width=50% height=50%>
+    <img src="https://github.com/hgavil/StockUp/blob/master/images/portfolio.png" width=50% height=50%>
 </p>
 
 The game is simple enough to play (but tricky to beat!) and instructions are provided in the help menu upon loading the game. They will also be referenced here: 

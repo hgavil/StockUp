@@ -41,9 +41,10 @@ Once the development environment has been set up, download and navigate to the p
 ## Project Requirements
 
 <!--![Account](images/account.png)-->
-
-<img src="https://github.com/hgavil/StockUp/blob/master/images/account.png" width=30% height=30%>
-<img src="https://github.com/hgavil/StockUp/blob/master/images/portfolio.png" width=30% height=30%>
+<p float="left">
+    <img src="https://github.com/hgavil/StockUp/blob/master/images/account.png" width=30% height=30%>
+    <img src="https://github.com/hgavil/StockUp/blob/master/images/portfolio.png" width=30% height=30%>
+</p>
 
 The game is simple enough to play (but tricky to beat!) and instructions are provided in the help menu upon loading the game. They will also be referenced here: 
 * **Controls:** W, A, S, D to move forward, view left, move backward, and view right accordingly. Space is to jump/power jump. Left click is to give out donuts.
